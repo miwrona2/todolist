@@ -93,12 +93,12 @@ class TodoController extends Controller
 
             $now = new\DateTime('now');
 
-            $todo->setName($todo->$getName());
-            $todo->setCategory($todo->$getCategory());
-            $todo->setDescription($todo->$getDescription());
-            $todo->setPriority($todo->$getPriority());
-            $todo->setDueDate($todo->$getDueDate());
-            $todo->setCreateDate($now);
+//            $todo->setName($todo->$getName());
+//            $todo->setCategory($todo->$getCategory());
+//            $todo->setDescription($todo->$getDescription());
+//            $todo->setPriority($todo->$getPriority());
+//            $todo->setDueDate($todo->$getDueDate());
+//            $todo->setCreateDate($now);
 
         $form = $this->createFormBuilder($todo)
             ->add('name', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
@@ -106,7 +106,7 @@ class TodoController extends Controller
             ->add('description', TextareaType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
             ->add('priority', ChoiceType::class, array('choices' => array('Low' => 'Low', 'Medium' => 'Medium', 'High' => 'High'), 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
            // ->add('due_date', DateTimeType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))﻿
-            ->add('save', SubmitType::class, array('label'=>'Create Todo','attr' => array('class' => 'btn btn-primary', 'style' => 'margin-bottom:15px')))
+            ->add('save', SubmitType::class, array('label'=>'Save Todo','attr' => array('class' => 'btn btn-primary', 'style' => 'margin-bottom:15px')))
             ->getForm();
 
 
