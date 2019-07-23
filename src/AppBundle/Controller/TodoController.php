@@ -91,15 +91,6 @@ class TodoController extends Controller
             ->getRepository('AppBundle:Todo')
             ->find($id);
 
-            $now = new\DateTime('now');
-
-//            $todo->setName($todo->$getName());
-//            $todo->setCategory($todo->$getCategory());
-//            $todo->setDescription($todo->$getDescription());
-//            $todo->setPriority($todo->$getPriority());
-//            $todo->setDueDate($todo->$getDueDate());
-//            $todo->setCreateDate($now);
-
         $form = $this->createFormBuilder($todo)
             ->add('name', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
             ->add('category', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
